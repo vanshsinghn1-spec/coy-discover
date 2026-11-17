@@ -2,7 +2,8 @@
 
 A standalone mobile-first web application featuring a swipe-based **"Discover" tab** for **Coy** ([app.getcoy.com](https://app.getcoy.com)), faithfully replicating its visual identity, design tokens, typography, and privacy-first core promise.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvanshsinghn1-spec%2Fcoy-discover)
+### Live Demo
+**Production URL**: [https://coy-discover-green.vercel.app/discover](https://coy-discover-green.vercel.app/discover)
 
 ---
 
