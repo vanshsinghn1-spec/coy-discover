@@ -1,0 +1,158 @@
+.card {
+  width: 100%;
+  height: 520px;
+  background: var(--bg);
+  border: var(--edge);
+  border-radius: 26px;
+  box-shadow: var(--pop);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  user-select: none;
+  touch-action: pan-y;
+}
+
+@media (max-height: 700px) {
+  .card {
+    height: 460px;
+  }
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  flex: 1;
+  min-height: 310px;
+  background: var(--soft);
+}
+
+.image {
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.imageGradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(21, 18, 29, 0.75) 100%
+  );
+  pointer-events: none;
+}
+
+.imageOverlayText {
+  position: absolute;
+  bottom: 14px;
+  left: 18px;
+  right: 18px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  z-index: 2;
+}
+
+.nameRow {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.name {
+  font-family: var(--sans);
+  font-size: 1.85rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.1;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.age {
+  font-family: var(--sans);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.details {
+  padding: 16px 18px 18px;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: none;
+}
+
+.bio {
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: var(--text);
+  margin: 0;
+  font-weight: 500;
+}
+
+.interests {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pill {
+  font-family: var(--sans);
+  font-size: 0.775rem;
+  font-weight: 700;
+  color: var(--text);
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1.5px solid var(--text);
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+/* Stamps for visual feedback */
+.stamp {
+  position: absolute;
+  top: 24px;
+  z-index: 10;
+  font-family: var(--sans);
+  font-size: 1.85rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  padding: 6px 16px;
+  border-radius: 12px;
+  border: 3.5px solid currentColor;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+  animation: pop 0.15s ease-out forwards;
+}
+
+.likeStamp {
+  right: 24px;
+  color: var(--ok);
+  border-color: var(--ok);
+  background: rgba(203, 244, 224, 0.92);
+  transform: rotate(12deg);
+}
+
+.passStamp {
+  left: 24px;
+  color: var(--danger);
+  border-color: var(--danger);
+  background: rgba(255, 228, 239, 0.92);
+  transform: rotate(-12deg);
+}

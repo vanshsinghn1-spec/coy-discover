@@ -1,0 +1,240 @@
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 8px 0 24px;
+  animation: rise 0.25s ease-out;
+}
+
+.headerSection {
+  margin-bottom: 20px;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.title {
+  font-family: var(--sans);
+  font-size: var(--step-3);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  color: var(--text);
+  margin: 0;
+}
+
+.counter {
+  font-family: var(--sans);
+  font-size: var(--step--1);
+  font-weight: 750;
+  background: var(--pink-soft);
+  color: var(--pink-strong);
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1.5px solid var(--text);
+}
+
+.subtitle {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.matchCard {
+  background: var(--soft);
+  border: 1.5px solid var(--line);
+  border-radius: 18px;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transition: transform 0.15s, border-color 0.15s, background-color 0.15s;
+}
+
+.matchCard:hover {
+  background: var(--pink-soft);
+  border-color: var(--text);
+  transform: translateY(-1px);
+}
+
+.avatarWrapper {
+  position: relative;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  border: 2px solid var(--text);
+  box-shadow: 2px 2px 0 var(--text);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.avatarImg {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.avatarDot {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  width: 10px;
+  height: 10px;
+  background: var(--ok);
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+}
+
+.info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.nameRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.name {
+  font-family: var(--sans);
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.matchedBadge {
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  font-weight: 750;
+  background: var(--mint);
+  color: var(--ok);
+  padding: 2px 8px;
+  border-radius: 999px;
+  letter-spacing: -0.01em;
+}
+
+.location {
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted);
+  margin: 0;
+}
+
+.bio {
+  font-family: var(--sans);
+  font-size: 0.825rem;
+  color: var(--text);
+  line-height: 1.35;
+  margin: 3px 0 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.action {
+  flex-shrink: 0;
+}
+
+.sayHiBtn {
+  background: var(--bg);
+  border: var(--edge);
+  box-shadow: 2px 2px 0 var(--text);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  color: var(--pink-strong);
+  transition: transform 80ms, background-color 0.15s;
+}
+
+.sayHiBtn:hover {
+  background: var(--pink-soft);
+}
+
+.sayHiBtn:active {
+  transform: translate(1px, 1px);
+  box-shadow: 1px 1px 0 var(--text);
+}
+
+/* Empty State in Matches */
+.emptyContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 48px 16px;
+  gap: 12px;
+}
+
+.emptyIconBox {
+  width: 72px;
+  height: 72px;
+  background: var(--soft);
+  border: var(--edge);
+  box-shadow: var(--pop);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin-bottom: 8px;
+}
+
+.emptyTitle {
+  font-family: var(--sans);
+  font-size: var(--step-2);
+  font-weight: 800;
+  color: var(--text);
+  margin: 0;
+}
+
+.emptyText {
+  color: var(--muted);
+  font-size: var(--step-0);
+  line-height: 1.45;
+  max-width: 28ch;
+  margin: 0 0 16px;
+}
+
+/* Skeleton Loading */
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.skeletonRow {
+  height: 80px;
+  background: var(--soft);
+  border-radius: 18px;
+  animation: pulse 1.4s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}

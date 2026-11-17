@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex: 1;
+  padding: 32px 16px;
+  animation: rise 0.3s ease-out;
+}
+
+.iconCircle {
+  width: 80px;
+  height: 80px;
+  background: var(--lilac);
+  border: var(--edge);
+  box-shadow: var(--pop);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin-bottom: 20px;
+}
+
+.emoji {
+  font-size: 2.5rem;
+}
+
+.title {
+  font-family: var(--sans);
+  font-size: var(--step-3);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  margin: 0 0 10px;
+}
+
+.description {
+  color: var(--muted);
+  font-size: var(--step-0);
+  line-height: 1.5;
+  max-width: 30ch;
+  margin: 0 0 28px;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 320px;
+}
+
+.resetBtn {
+  border: var(--edge);
+}

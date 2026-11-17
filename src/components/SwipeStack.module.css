@@ -1,0 +1,101 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  position: relative;
+  justify-content: space-between;
+}
+
+.deck {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
+}
+
+@media (max-height: 700px) {
+  .deck {
+    height: 460px;
+  }
+}
+
+.backgroundCardWrapper {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  transform: scale(0.96) translateY(12px);
+  opacity: 0.75;
+  pointer-events: none;
+  filter: brightness(0.96);
+  z-index: 1;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.foregroundCardWrapper {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 5;
+  cursor: grab;
+}
+
+.foregroundCardWrapper:active {
+  cursor: grabbing;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  padding: 16px 0 12px;
+  width: 100%;
+  z-index: 10;
+}
+
+.actionBtn {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: var(--edge);
+  box-shadow: var(--pop);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: transform 80ms, box-shadow 80ms, background-color 0.15s;
+  outline: none;
+}
+
+.actionBtn:active:not(:disabled) {
+  box-shadow: var(--pop-active);
+  transform: translate(2px, 2px);
+}
+
+.actionBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.passBtn {
+  background: var(--bg);
+  color: var(--danger);
+}
+
+.passBtn:hover:not(:disabled) {
+  background: var(--soft);
+}
+
+.likeBtn {
+  background: var(--pink);
+  color: #ffffff;
+}
+
+.likeBtn:hover:not(:disabled) {
+  background: #ff5a94;
+}

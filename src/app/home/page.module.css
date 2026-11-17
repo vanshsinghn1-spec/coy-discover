@@ -1,0 +1,42 @@
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 10px;
+}
+
+.placeholderBox {
+  background: var(--soft);
+  border: var(--edge);
+  box-shadow: var(--pop);
+  border-radius: var(--radius);
+  padding: 32px 24px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.iconMark {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.title {
+  font-size: var(--step-3);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  margin: 0;
+}
+
+.subtitle {
+  color: var(--muted);
+  font-size: var(--step-0);
+  line-height: 1.45;
+  max-width: 28ch;
+}

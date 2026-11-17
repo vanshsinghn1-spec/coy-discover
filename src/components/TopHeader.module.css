@@ -1,0 +1,42 @@
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 56px;
+  padding: 12px 0 8px;
+  width: 100%;
+}
+
+.wordmarkLink {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.iconBtn {
+  background: var(--soft);
+  width: 40px;
+  height: 40px;
+  color: var(--muted);
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  transition: background 0.15s, color 0.15s, transform 0.1s;
+}
+
+.iconBtn:hover {
+  background: var(--line);
+  color: var(--text);
+}
+
+.iconBtn:active {
+  transform: scale(0.95);
+}
